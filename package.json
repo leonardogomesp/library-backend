@@ -10,8 +10,82 @@
     "type": "git",
     "url": "git+https://github.com/leonardogomesp/library-backend.git"
   },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [
+    "borderplate",
+    "aceleradora",
+    "nodejs",
+    "javascript"
+  ],
   "author": "leonardogomesp, erickcardoso007, willianfreitas01",
   "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.15.8",
+    "axios": "^0.24.0",
+    "class-validator": "^0.13.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.2.0",
+    "google-spreadsheet": "^3.2.0",
+    "googleapis": "^104.0.0",
+    "husky": "^8.0.1",
+    "jest-mock-extended": "^2.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.7.5",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.40",
+    "winston": "^3.7.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.15.8",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/express": "^4.17.13",
+    "@types/google-spreadsheet": "^3.1.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "cz-ptbr-changelog": "^1.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-ptbr-changelog"
+    }
+  },
   "bugs": {
     "url": "https://github.com/leonardogomesp/library-backend/issues"
   },
