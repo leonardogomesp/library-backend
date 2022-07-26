@@ -1,0 +1,1 @@
+export const defineRoutes = (app) => {};
