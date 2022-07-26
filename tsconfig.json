@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+      "target": "es2017",
+      "module": "commonjs",
+      "lib": [
+        "es6"
+      ],
+      "allowJs": true,
+      "noEmit": true,
+      "baseUrl": ".",
+      "paths": {
+        "@controllers/*": [
+          "./src/controllers/*"
+        ],
+        "@models/*": [
+          "./src/models/*"
+        ],
+        "@messages/*": [
+          "./src/messages/*"
+        ],
+        "@service/*": [
+          "./src/service/*"
+        ]
+      },
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "removeComments": true,
+      "strict": false,
+      "resolveJsonModule": true,
+      "typeRoots": [
+        "./node_modules/@types",
+        "./src/@types"
+      ],
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true
+    },
+    "include": [
+      "src/**/*"
+    ]
+  }

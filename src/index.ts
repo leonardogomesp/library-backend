@@ -1,7 +1,7 @@
 require("dotenv").config({ path: "../.env" });
 
 import express from "express";
-import { connect } from "../db-connection";
+import { connect } from "./db-connection";
 import cors from "cors";
 import { defineRoutes } from "./routes";
 import { requestLogger, requestErrorLogger, logger } from "./logger";

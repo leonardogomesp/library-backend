@@ -4,6 +4,7 @@
   "description": "this is a personal project",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
