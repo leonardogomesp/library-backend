@@ -1,0 +1,19 @@
+{
+  "name": "library-backend",
+  "version": "1.0.0",
+  "description": "this is a personal project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardogomesp/library-backend.git"
+  },
+  "author": "leonardogomesp, erickcardoso007, willianfreitas01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardogomesp/library-backend/issues"
+  },
+  "homepage": "https://github.com/leonardogomesp/library-backend#readme"
+}
