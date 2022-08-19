@@ -1,6 +1,6 @@
-import winston from "winston";
-import expressWinston from "express-winston";
-import { Handler } from "express";
+import winston from 'winston';
+import expressWinston from 'express-winston';
+import { Handler } from 'express';
 
 const transports = [new winston.transports.Console()];
 
