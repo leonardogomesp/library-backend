@@ -1,18 +1,7 @@
-import { 
-  deleteBook, 
-  getBook, 
-  getID, 
-  postBook, 
-  putBook } from "@controllers/Book";
-
-import { getUser } from "@controllers/User";
+import { createUser, getAllUsers, getOneUser } from "./controller/user"
 
 export const defineRoutes = (app) => {
-
-  app.get("/book", getBook)
-  app.get("/book/:id", getID)
-  app.get("/user", getUser)
-  app.post("/Book", postBook)
-  app.delete("/book/:id", deleteBook)
-  app.put("/book/:id", putBook)
-};
+  app.post("/user", createUser)
+  app.get("/user", getAllUsers)
+  app.get("/user/:id", getOneUser)
+}
