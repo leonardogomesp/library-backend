@@ -25,7 +25,7 @@
     "nodejs",
     "javascript"
   ],
-  "author": "leonardogomesp, erickcardoso007, willianfreitas01",
+  "author": "leonardogomesp",
   "license": "ISC",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.15.8",
