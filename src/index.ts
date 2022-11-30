@@ -6,7 +6,7 @@ import cors from "cors";
 import { defineRoutes } from "./routes";
 import { requestLogger, requestErrorLogger, logger } from "./logger";
 
-const start = async () => {
+export const start = async () => {
   try {
     logger.info("Establishing database connection...");
     await connect();
