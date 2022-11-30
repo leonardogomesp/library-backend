@@ -28,3 +28,22 @@ export const getOneUser = async (request, response) => {
     return response.status(500).json(error)
   }
 }
+
+export const updateUser = async (request, response) => {
+  try {
+    const user = userRequest().convertFromHttpBody(request.body)
+    const result = await userService().updateUserService(user, request.params.id)
+    return response.status(200).json(result)
+  } catch (error) {
+    return response.status(500).json(error)
+  }
+}
+
+export const deleteUser = async (request, response) => {
+  try {
+    const result = await userService().deleteUserService(request.params.id)
+    return response.status(200).json(result)
+  } catch (error) {
+    return response.status(500).json(error)
+  }
+}
