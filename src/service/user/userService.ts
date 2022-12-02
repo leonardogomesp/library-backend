@@ -1,11 +1,23 @@
 import { User } from "@models/entity/User"
 import { getRepository } from "typeorm"
 import { validate } from "class-validator"
-import { nodemailerService } from "@service/nodemailer/nodemailerService"
+import { emailService } from "@service/emails/emailService"
 import bcrypt from "bcrypt"
+import { registerEmailContent } from "@messages/emailContent"
 
 export const userService = () => {
   const userRepository = getRepository(User)
+
+  const sendEmail = async (user, message) => {
+    const { from, subject, content } = message
+    const { name, email } = user
+    await emailService().send(
+      from,
+      email,
+      subject,
+      content(name)
+    )
+  }
 
   const validateUser = async (user) => {
     const error = await validate(user)
@@ -16,12 +28,10 @@ export const userService = () => {
   }
 
   const createUserService = async (userRequest) => {
-    const passwordEncrypted = await bcrypt.hash(userRequest.password, 10)
-    userRequest.password = passwordEncrypted 
     const userEntity = userRepository.create(userRequest)
     await validateUser(userEntity)
-    await nodemailerService().sendEmail(userRequest)
     const saveUser = await userRepository.save(userEntity)
+    await sendEmail(userEntity, registerEmailContent)
     return saveUser
   }
 

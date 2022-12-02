@@ -6,8 +6,8 @@ export const createUser = async (request, response) => {
     const user = userRequest().convertFromHttpBody(request.body)
     const result = await userService().createUserService(user)
     return response.status(200).json(result)
-  } catch (error) {
-    return response.status(500).json(error)
+  } catch (err) {
+    return response.status(500).json(err)
   }
 }
 

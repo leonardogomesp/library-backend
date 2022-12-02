@@ -8,11 +8,11 @@ import { requestLogger, requestErrorLogger, logger } from "./logger";
 
 const start = async () => {
   try {
-    logger.info("Establishing database connection...");
+    logger.info("Estabelecendo conexão com o banco de dados...");
     await connect();
-    logger.info("Database connection established!");
+    logger.info("Conexão com o banco de dados estabelecida!");
 
-    logger.info("Starting application server...");
+    logger.info("Iniciando o servidor da aplicação...");
 
     const app = express();
     const port = process.env.PORT || 9000;
@@ -27,10 +27,10 @@ const start = async () => {
     app.use(requestErrorLogger());
 
     app.listen(port, () => {
-      logger.info(`Server's running in http://localhost:${port}`);
+      logger.info(`Servidor está rodando em: http://localhost:${port}`);
     });
   } catch (error) {
-    throw new Error(`Failed to start application server: ${error.message}`);
+    throw new Error(`Falha ao iniciar o servidor da aplicação: ${error.message}`);
   }
 };
 
